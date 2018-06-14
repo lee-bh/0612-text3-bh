@@ -1,0 +1,135 @@
+<style>
+	body{ margin: auto; position: relative; }
+	.black{ background: black; }
+	.white{ background: white; }
+	.wrap{ width: 1400px; margin: auto; position: relative;}
+	#home{ height: 1217px;}
+	#menu1{ height: 1631px;}
+	#menu2{ background: url(./img/back3.jpg); background-size: 100% auto; height: 7389px; border-top: 1px solid white; }
+	#menu3{ height: 2750px;}
+	#footer{ height: 471px; }
+
+	h1, h2, h3, h4, h5, h6{margin:0;} /* h, p들은 normalize를 해도 마진이 조금 남아있음 - 초기화 : 크롬에서찍어볼것*/
+
+	nav,h2{ font-family: 'Archivo Black', sans-serif; font-weight: 700; font-style: italic;}
+	{ font-family: 'Archivo Black', sans-serif; font-weight: 700;}
+	h3, p{ font-family: "source-han-sans-korean", sans-serif; font-weight: 500;}
+	h3{ font-family: "source-han-sans-korean", sans-serif; font-weight: 700;}
+	p{ line-height: 173%; }
+	em{ text-decoration: underline; }
+
+	nav {font-size: 1.3em;}
+
+	a:link, a:active, a:visited, a:hover{ text-decoration: none; }
+	a:hover{ text-decoration: underline; }
+
+	nav{ width: 1400px; margin: auto; height: 200px;}
+	nav #logo{ width: 250px; height: 220px; float: left; margin-left: 100px; margin-top: -5px;}
+	nav #logo img{ height: 220px;}
+	nav #menuList{ float: right; margin-right: 66px; margin-top: 85px; padding: 0;}
+	nav #menuList .main-menu-item{ list-style: none; float: left; width: 219px; height: 65px; line-height: 125%;}
+	nav #menuList a{ height: 65px; }
+	nav #menuList2{ float: right; margin-right: 66px; margin-top: 85px; padding: 0;}
+	nav #menuList2 .main-menu-item2{ list-style: none; float: left; width: 219px; height: 65px; line-height: 125%;}
+	nav #menuList2 a{ height: 65px; }
+
+	span {display: block;}
+
+	.title{ float: left; width: 640px; margin: auto; position: relative; left: 30px;}
+	.title h2{ font-size: 7.5em; letter-spacing: -4px; color: white; background: black; }
+	.title2{ 
+		/* float: left; 플롯설정이 된 이후에 안된 애가 오면 제대로 쌓이지 않는다. 그래서 밑에 gif블럭이 엉뚱하게 올라와 붙어버린 것임. 
+			DISS IS AMERICA 타이틀블럭은 float: left가 필요 없으므로 지워도 상관없음 > 문제해결
+			쌓이는 친구들을 담고있는 전체 박스는 float:left를 주면 위험함; > 크리티컬 포인트
+			쌓이는 친구들을 담고있는 전체 박스는 float:left를 주면 위험함; > 크리티컬 포인트
+		 */
+		width: 640px; margin: auto; position: relative; left: 30px; 
+		/* margin-top: 100px; 여기서 마진과 패딩의 차이를 알 수 있음 패딩을 주고 겉에 박스인 menu2에 border-top을 주어야함
+		분명하게 파악하기 어려우면 마진이 안먹힐 땐 패딩을 시도해 볼 것*/
+		padding-top: 100px;
+		margin-bottom: 200px;
+	}
+	.title2 h2{ font-size: 7.5em; letter-spacing: -4px; color: black; background: white; }
+
+	/*scroll*/
+	#imgX{position:fixed; width:480px; height:480px; top:290px; left:520px; }
+
+	/*header*/
+	header #america { width: 1200px; position: relative; left: 136px; top: 215px;}
+	header #america img{ width: 94%;}
+
+	/*menu1*/
+	#movie{width: 200%; height: 600px; max-width: 1080px; position: relative; left: 357px; }
+	#menu1 .text { width: 1110px; margin: auto; position: relative; top: 370px; background: white;}
+	#menu1 .text p{ font-size: 1.33em; line-height: 173%; letter-spacing: -0.5px; }
+
+	/*menu2*/
+	section {width: 1150px; margin: auto; opacity: 0.5; /* 이렇게 투명도를 걸어서 맞추면 편함 */
+		position: relative; /* top: 500px; 그래서 안되니까 응급처치로 원비가 상단에서 500px 띄우도록 설정했는데, 
+		relative는 가상으로 이동하는 개념이라 보이기엔 제대로 붙었지만 실체는 밑에 남아있었던 것임 그래서 여백이 500px 생긴 것
+		위에서 float: left를 지워서 문제를 해결했기 때문에 top:500px도 삭제하고 제대로 되었음 */
+		margin-bottom: 3em; /*margin-bottom:3이 작음*/;}
+	section:after {content:""; display: block; clear: both;}
+
+	#bang {width: 1250px; height: 800px; background: url(./img/bang.jpg); background-size: cover;}
+	.col1 {/*  width: 30%; 상자를 항상 원래 사진 사이즈에 맞추고 이미지를 그 속에 이미지 폭을 100%로 해줘야 다른 여백 간섭이 없음 */
+		width:490px;
+		margin: 1.65%; overflow: hidden;
+		margin-right:3%;
+		} /* 넘치면 안보이게 overflow:hidden 걸어두어야 */ 
+
+	img {width:100%;} /*이미지는 항상 100%로 고정하고 잘 나오게 */
+
+	/*이런식으로 아래도 지속*/ 
+
+
+	.col2 {width: 355px; padding-right: 70px; padding-left: 80px;}
+	
+	.col3 {width: 44%; margin: 1.65%;}
+	.col4 {width: 50%; margin: 1.65%;}
+	
+	.col4-1 {width: 55%; margin: 1.65%}
+	
+	.col6 {width: 38%; margin: 1.65%;}
+	
+
+	.section-texts {padding: 2%; padding-top: 0 /*이미지랑 위를 정렬하려면 탑패딩은 0 */}
+	.no-padding {padding: 0;}
+
+	.section-texts p {margin: 0; color: white; font-size: 1.33em; letter-spacing: -0.5px;}
+	.section-texts2 p {margin: 0; color: white; font-size: 1.33em; letter-spacing: -0.5px; text-align: right;}
+
+	.left {float: left;}
+	.right {float: right;}
+
+	/*menu3*/
+	#gambino { width: 1400px; margin: auto; position: relative; top: 50px;}
+	#gambino img{ width: 1400px; }
+	#menu3 .text { width: 1110px; margin: auto; position: relative; top: 190px; left: 5px; background: white;}
+	#menu3 .text p{ font-size: 1.33em; line-height: 173%; letter-spacing: -0.55px; }
+	#menu3 .text2 { width: 880px; margin: auto; position: relative; top: 148px; right: 110px; background: white;}
+	#menu3 .text2 p{ font-size: 1.33em; line-height: 173%; letter-spacing: -0.6px; }
+	#menu3 .text3 { width: 1110px; margin: auto; position: relative; top: 270px; left: 5px; background: white;}
+	#menu3 .text3 p{ font-size: 1.33em; line-height: 173%; letter-spacing: -0.55px; }
+	#menu3 #pizza {width: 200px; position: relative; float: right; bottom: 125px; right: 195px;}
+	#menu3 #wutang {width: 750px; margin: auto; position: relative; top: 210px;}
+
+	.section { width: 1350px; margin: auto; padding: 1em; margin-bottom: 1em; z-index: 9999}
+	.float{ width: 300px; height: 300px; float: left; margin:1em; margin-bottom: -2em; z-index: 9999}
+	.album{ height: 300px; overflow: hidden; z-index: 9999}
+	.album img{ width: 300px; z-index: 9999}
+	.clear {clear: both;}
+
+	/*footer*/
+	footer .info { width: 1110px; margin: auto; position: relative; top: 350px; left: 5px; }
+	footer .info p{font-size: 1em; line-height: 170%; letter-spacing: -0.5px; color: white;}
+	footer .info2 { width: 1110px; margin: auto; position: relative; top: 350px; left: 5px; }
+	footer .info2 p{font-size: 1em; line-height: 170%; letter-spacing: -0.5px; }
+
+
+	@media all and (max-width: 767px) {
+		header {width: inherit; height: 300px;}
+
+	}
+/*margin-left: 63px; margin-top: 60px;*/
+</style>
